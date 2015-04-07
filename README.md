@@ -8,3 +8,5 @@ ios-exercises
 - My second attempt at changing this file in a branch
 
 - Why do I need to insert origin my-first-branch when I push this, when I didn't have to the first time?
+
+- Trying a change on a different branch - myNotSoFirst Branch
