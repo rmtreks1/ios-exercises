@@ -26,7 +26,8 @@
     };
 
     [awesomeCounterString appendString:[NSMutableString stringWithFormat:@"%ld", upperLimit]];
-    NSLog(awesomeCounterString);
+    
+    //NSLog(awesomeCounterString);
     
     
     
