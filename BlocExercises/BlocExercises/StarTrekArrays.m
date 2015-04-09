@@ -25,7 +25,6 @@
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
     NSMutableArray *characterArrayMutable = [NSMutableArray arrayWithArray:characterArray];
-  //  NSLog([characterArrayMutable componentsJoinedByString:@";"]);
     
     NSSortDescriptor *sortThisAlphabetically = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
     [characterArrayMutable sortUsingDescriptors: @[sortThisAlphabetically]];
@@ -39,9 +38,13 @@
     // (Try) to create an Array filtering for Worf
     NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
     NSMutableArray *characterArrayMutable = [NSMutableArray arrayWithArray:characterArray];
-    [characterArrayMutable filteredArrayUsingPredicate:containsWorf];
+    [characterArrayMutable filterUsingPredicate:containsWorf];
+    
+ // NSLog([characterArrayMutable componentsJoinedByString:@";"]);
+    
     
     BOOL *worfPresent = (characterArrayMutable.count != 0) ? YES : NO;
+   // NSLog(worfPresent ? @"Yes" : @"No");
     
     return worfPresent;
 }
