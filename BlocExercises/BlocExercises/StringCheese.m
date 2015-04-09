@@ -48,16 +48,40 @@
     NSString *cheeseNameOnly = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
     
     // Printing out to console to test
-    NSLog(cheeseNameOnly);
+//    NSLog(cheeseNameOnly);
     
     return cheeseNameOnly;
 }
 
+/**
+ Creates a string indicating a the number of cheeses.
+ 
+ Example usage:
+ 
+ @code
+ NSString *phrase = [cheese numberOfCheesesStringWithCheeseCount:4];
+ // phrase is "4 cheeses"
+ 
+ NSString *phrase2 = [cheese numberOfCheesesStringWithCheeseCount:1];
+ // phrase2 is "1 cheese"
+ @endcode
+ 
+ @param cheeseCount
+ The number of cheeses.
+ 
+ @return Returns a string indicating a the number of cheeses.
+ */
+
+
+
+
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
     if (cheeseCount == 1) {
-        /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
+
+        return [NSString stringWithFormat:@"%ld cheese", cheeseCount];
     } else {
         /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
+        return [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
     }
     
     /*
