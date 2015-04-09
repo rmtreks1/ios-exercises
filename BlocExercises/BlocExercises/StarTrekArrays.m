@@ -35,7 +35,15 @@
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
-    return NO;
+    
+    // (Try) to create an Array filtering for Worf
+    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
+    NSMutableArray *characterArrayMutable = [NSMutableArray arrayWithArray:characterArray];
+    [characterArrayMutable filteredArrayUsingPredicate:containsWorf];
+    
+    BOOL *worfPresent = (characterArrayMutable.count != 0) ? YES : NO;
+    
+    return worfPresent;
 }
 
 @end
