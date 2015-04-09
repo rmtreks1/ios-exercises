@@ -41,7 +41,7 @@
      
      @return Returns the name of the favorite cheese without the word "cheese".
      */
-    NSRange cheeseRange = [cheeseName rangeOfString:@" cheese"];
+    NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
     NSString *cheeseNameOnly = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
     
     // Printing out to console to test
