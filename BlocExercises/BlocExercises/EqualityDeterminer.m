@@ -22,7 +22,7 @@
 
 - (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
     /* WORK HERE */
-    return NO;
+    return (integer1 > integer2);
 }
 
 @end
