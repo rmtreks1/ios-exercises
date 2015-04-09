@@ -38,7 +38,17 @@
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @{};
+    // check if there's already a quote - if yes return the quote
+    NSString *quote = characterDictionary[@"quote"];
+    if (quote != nil && [quote isKindOfClass:[NSString class]]){
+        return characterDictionary;
+    }
+    
+    // if there isn't already an acceptable quote - set one
+    NSMutableDictionary *characterDictionaryWithQuote = [characterDictionary mutableCopy];
+    [characterDictionaryWithQuote setObject:@"Make it so number 1" forKey:@"quote"];
+    
+    return characterDictionaryWithQuote;
 }
 
 @end
