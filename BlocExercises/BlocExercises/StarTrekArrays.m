@@ -18,7 +18,8 @@
 
 - (NSString *) stringOfStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
-    return @"";
+    NSString *castString = [characterArray componentsJoinedByString:@";"];
+    return castString;
 }
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
