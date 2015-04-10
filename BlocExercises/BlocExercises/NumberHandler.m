@@ -18,8 +18,17 @@
 }
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
-    /* WORK HERE */
-    return @[];
+    NSMutableArray *arrayOfNumbers = [[NSMutableArray alloc]init];
+    
+    NSInteger lowerLimit = MIN(number, otherNumber);
+    NSInteger upperLimit = MAX(number, otherNumber);
+    
+    for (NSInteger numberToAdd = lowerLimit; numberToAdd <= upperLimit; numberToAdd++) {
+        [arrayOfNumbers addObject:[NSNumber numberWithInteger:numberToAdd]];
+    }
+    
+    
+    return arrayOfNumbers;
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
