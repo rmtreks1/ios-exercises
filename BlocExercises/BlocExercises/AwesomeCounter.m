@@ -20,12 +20,12 @@
     
     awesomeCounterString = [[NSMutableString alloc] init];
     
-    for (NSInteger counter = lowerLimit; counter < upperLimit; counter++) {
+    for (NSInteger counter = lowerLimit; counter <= upperLimit; counter++) {
         [awesomeCounterString appendString:[NSMutableString stringWithFormat:@"%ld", counter]];
         
     };
 
-    [awesomeCounterString appendString:[NSMutableString stringWithFormat:@"%ld", upperLimit]];
+//    [awesomeCounterString appendString:[NSMutableString stringWithFormat:@"%ld", upperLimit]];
     
     //NSLog(awesomeCounterString);
     
