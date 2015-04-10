@@ -20,7 +20,6 @@
 
 - (void) rememberThisFloatForLater:(CGFloat)floatToRemember {
     self.rememberedFloat = floatToRemember;
-    // don't understand why we need the & symbol
 }
 
 - (NSMutableArray *) arrayYouShouldRemember {
