@@ -11,8 +11,10 @@
 @implementation NumberHandler
 
 - (NSNumber *) numberThatIsTwiceAsBigAsNumber:(NSNumber *)number {
-    /* WORK HERE */
-    return @0;
+    int newNumberInt = [number intValue]*2;
+    NSNumber *newNumber = [NSNumber numberWithInt:newNumberInt];
+    
+    return newNumber;
 }
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
