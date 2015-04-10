@@ -29,11 +29,12 @@
     NSMutableArray *favoriteDrinksForStars = [[NSMutableArray alloc] init];
     
     for (NSDictionary *character in charactersArray) {
-        id favoriteDrink = character[@"favorite drink"];
+        NSString *favoriteDrink = [self favoriteDrinkForStarTrekCharacterDictionary:character];
+        //        id favoriteDrink = character[@"favorite drink"];
         [favoriteDrinksForStars addObject:favoriteDrink];
-        }
-    return favoriteDrinksForStars;
     }
+    return favoriteDrinksForStars;
+}
 
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {

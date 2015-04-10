@@ -11,6 +11,7 @@
 @implementation NumberHandler
 
 - (NSNumber *) numberThatIsTwiceAsBigAsNumber:(NSNumber *)number {
+    // ideally should check the type that is coming in.
     int newNumberInt = [number intValue]*2;
     NSNumber *newNumber = [NSNumber numberWithInt:newNumberInt];
     
@@ -24,7 +25,7 @@
     NSInteger upperLimit = MAX(number, otherNumber);
     
     for (NSInteger numberToAdd = lowerLimit; numberToAdd <= upperLimit; numberToAdd++) {
-        [arrayOfNumbers addObject:[NSNumber numberWithInteger:numberToAdd]];
+        [arrayOfNumbers addObject:@(numberToAdd)];
     }
     
     
