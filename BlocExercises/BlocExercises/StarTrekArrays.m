@@ -43,8 +43,7 @@
  // NSLog([characterArrayMutable componentsJoinedByString:@";"]);
     
     
-    BOOL *worfPresent = (characterArrayMutable.count != 0) ? YES : NO;
-   // NSLog(worfPresent ? @"Yes" : @"No");
+    BOOL worfPresent = (characterArrayMutable.count != 0);
     
     return worfPresent;
 }
