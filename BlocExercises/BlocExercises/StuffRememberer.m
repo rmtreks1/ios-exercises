@@ -19,7 +19,8 @@
 }
 
 - (void) rememberThisFloatForLater:(CGFloat)floatToRemember {
-    /* WORK HERE */
+    self.rememberedFloat = floatToRemember;
+    // don't understand why we need the & symbol
 }
 
 - (NSMutableArray *) arrayYouShouldRemember {
@@ -37,8 +38,11 @@
 }
 
 - (CGFloat) floatYouShouldRemember {
-    /* WORK HERE */
-    return 0.0f;
+    if ([self rememberedFloat] != NSNotFound) {
+        return [self rememberedFloat];
+    }
+    return NSNotFound;
+  
 }
 
 @end
