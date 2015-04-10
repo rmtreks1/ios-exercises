@@ -32,8 +32,15 @@
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
-    /* WORK HERE */
-    return 0;
+    // sort the array in ascending order
+    
+    NSMutableArray *mutuableArrayOfNumbers = [arrayOfNumbers mutableCopy];
+    NSSortDescriptor *ascendingSorter = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
+    [mutuableArrayOfNumbers sortUsingDescriptors:@[ascendingSorter]];
+    
+    
+    
+    return [mutuableArrayOfNumbers[0] integerValue];
 }
 
 @end
