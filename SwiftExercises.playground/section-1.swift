@@ -8,7 +8,7 @@ Strings
 
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     // WORK HERE
-    return cheese
+    return "My favorite cheese is \(cheese)"
 }
 
 let fullSentence = favoriteCheeseStringWithCheese("cheddar")
@@ -20,13 +20,17 @@ Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4]
+var numberArray = [1, 2, 3, 4]
 // Add 5 to this array
 // WORK HERE
+numberArray += [5]
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+
 // Add 5 : "five" to this dictionary
 // WORK HERE
+numberDictionary[5] = "five"
 
 /*
 
@@ -34,11 +38,20 @@ Loops
 
 */
 
+
 // Use a closed range loop to print 1 - 10, inclusively
 // WORK HERE
+for number in 1...10 {
+    println(number)
+}
+
+
 
 // Use a half-closed range loop to print 1 - 10, inclusively
 // WORK HERE
+for  number in 1..<11 {
+    println(number)
+}
 
 let worf = [
     "name": "Worf",
@@ -47,23 +60,33 @@ let worf = [
     "favorite drink": "prune juice",
     "quote" : "Today is a good day to die."]
 
+
+
 let picard = [
     "name": "Jean-Luc Picard",
     "rank": "captain",
     "information": "Captain of the USS Enterprise",
     "favorite drink": "tea, Earl Grey, hot"]
 
+
 let characters = [worf, picard]
+
 
 func favoriteDrinksArrayForCharacters(characters:Array<Dictionary<String, String>>) -> Array<String> {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
-    return []
+    var favDrinks = [String]() // Don't understand why I got to put ()
+    for character in characters {
+  //      favDrinks += [character["favorite drinks"]] // why does this not work?
+        favDrinks.append(character["favorite drink"]!)
+    }
+    return favDrinks
 }
+
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
 
-favoriteDrinks
+// favoriteDrinks
 
 /*
 
@@ -76,8 +99,19 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 // WORK HERE - make your function and pass `strings` in
+func convertStringArrayIntoSemicolon(items:Array<String>) -> String {
+    var itemString = "\(items[0])"
+    for var i = 1; i<items.count; i++ {
+        itemString += ";\(items[i])"
+    }
+    
+    return itemString
+}
 
+
+let testOutput = convertStringArrayIntoSemicolon(strings)
 let expectedOutput = "milk;eggs;bread;challah"
+
 
 /*
 
