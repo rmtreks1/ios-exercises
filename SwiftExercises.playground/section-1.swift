@@ -32,6 +32,7 @@ var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // WORK HERE
 numberDictionary[5] = "five"
 
+// numberDictionary
 /*
 
 Loops
@@ -123,3 +124,20 @@ let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All
 
 // Use a closure to sort this array alphabetically
 // WORK HERE
+
+// as a function
+// func sortAscending(item1: String, item2: String) -> Bool {
+ //   return item1 < item2
+// }
+
+// testing function
+// sortAscending("Golden Grahams", "Cheerios")
+
+
+let cerealArrayAscending = sorted(cerealArray, {(item1: String, item2: String) -> Bool in return item1 < item2})
+
+// testing the output
+// println(cerealArrayAscending)
+
+
+
